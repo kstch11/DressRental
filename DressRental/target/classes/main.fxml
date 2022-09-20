@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: d0ffa1 d0ffa1;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <VBox layoutX="28.0" layoutY="38.0" prefHeight="145.0" prefWidth="76.0" spacing="15.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="74.0" text="Personal ID" />
+            <Label prefHeight="17.0" prefWidth="76.0" text="Firstname" />
+            <Label text="Surname" />
+            <Label text="Size" />
+            <Label text="Email" />
+         </children>
+      </VBox>
+      <VBox layoutX="104.0" layoutY="36.0" prefHeight="144.0" prefWidth="161.0" spacing="5.0">
+         <children>
+            <TextField fx:id="newPersonalId" />
+            <TextField fx:id="newFirstname" />
+            <TextField fx:id="newSecondname" />
+            <TextField fx:id="newSize" />
+            <TextField fx:id="newEmail" />
+         </children>
+      </VBox>
+      <VBox layoutX="28.0" layoutY="273.0" prefHeight="165.0" prefWidth="76.0" spacing="15.0">
+         <children>
+            <Label text="Serial number" />
+            <Label text="Size" />
+            <Label text="Style" />
+            <Label text="Brand" />
+            <Label text="Color" />
+         </children>
+      </VBox>
+      <VBox layoutX="104.0" layoutY="268.0" prefHeight="165.0" prefWidth="161.0" spacing="5.0">
+         <children>
+            <TextField fx:id="newSerialNumber" />
+            <TextField fx:id="new_Size" />
+            <TextField fx:id="newStyle" />
+            <TextField fx:id="newBrand" />
+            <TextField fx:id="newColor" />
+         </children>
+      </VBox>
+      <VBox layoutX="28.0" layoutY="514.0" prefHeight="80.0" prefWidth="76.0" spacing="15.0">
+         <children>
+            <Label text="Client ID" />
+            <Label text="Dress ID" />
+         </children>
+      </VBox>
+      <VBox layoutX="98.0" layoutY="514.0" prefHeight="74.0" prefWidth="169.0" spacing="5.0">
+         <children>
+            <TextField fx:id="newClientId" />
+            <TextField fx:id="newDressId" />
+         </children>
+      </VBox>
+      <Button fx:id="deleteClient" layoutX="220.0" layoutY="197.0" mnemonicParsing="false" onAction="#deleteClient" text="Delete" />
+      <Button fx:id="updateClient" layoutX="154.0" layoutY="197.0" mnemonicParsing="false" onAction="#updateClient" text="Update" />
+      <Button fx:id="addNewClient" layoutX="107.0" layoutY="197.0" mnemonicParsing="false" onAction="#addClient" text="Add" />
+      <Button fx:id="deleteDress" layoutX="220.0" layoutY="435.0" mnemonicParsing="false" onAction="#deleteDress" text="Delete" />
+      <Button fx:id="updateDress" layoutX="154.0" layoutY="435.0" mnemonicParsing="false" onAction="#updateDress" text="Update" />
+      <Button fx:id="addNewDress" layoutX="107.0" layoutY="435.0" mnemonicParsing="false" onAction="#addDress" text="Add" />
+      <Button fx:id="deleteOrder" layoutX="220.0" layoutY="584.0" mnemonicParsing="false" onAction="#deleteOrder" text="Delete" />
+      <Button fx:id="updateOrder" layoutX="156.0" layoutY="584.0" mnemonicParsing="false" onAction="#updateOrder" text="Update" />
+      <Button fx:id="addNewOrder" layoutX="107.0" layoutY="584.0" mnemonicParsing="false" onAction="#addOrder" text="Add" />
+      <Button fx:id="updateClientTable" layoutX="623.0" layoutY="233.0" mnemonicParsing="false" onAction="#updateClientTable" text="Update table with clients" />
+      <Button fx:id="updateDressTable" layoutX="623.0" layoutY="474.0" mnemonicParsing="false" onAction="#updateDressTable" text="Update table with dresses" />
+      <Button fx:id="updateOrderTable" layoutX="563.0" layoutY="660.0" mnemonicParsing="false" onAction="#updateOrderTable" text="Update table with orders" />
+      <ScrollPane layoutX="287.0" layoutY="36.0" prefHeight="190.0" prefWidth="487.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="190.0" prefWidth="488.0">
+               <children>
+                  <TableView fx:id="clientTable" prefHeight="190.0" prefWidth="487.0">
+                    <columns>
+                      <TableColumn fx:id="idColumn" prefWidth="71.0" text="Personal ID" />
+                      <TableColumn fx:id="fnameColumn" prefWidth="114.0" text="Firstname" />
+                        <TableColumn fx:id="snameColumn" prefWidth="119.0" text="Surname" />
+                        <TableColumn fx:id="sizeColumn" prefWidth="41.0" text="Size" />
+                        <TableColumn fx:id="emailColumn" prefWidth="125.0" text="Email" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ScrollPane layoutX="293.0" layoutY="508.0" prefHeight="178.0" prefWidth="253.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="178.0" prefWidth="251.0">
+               <children>
+                  <TableView fx:id="orderTable" layoutX="-6.0" prefHeight="178.0" prefWidth="244.0">
+                    <columns>
+                      <TableColumn fx:id="clientColumn" prefWidth="123.0" text="Client ID" />
+                      <TableColumn fx:id="dressColumn" prefWidth="117.0" text="Dress ID" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+    <AnchorPane layoutX="293.0" layoutY="268.0" minHeight="0.0" minWidth="0.0" prefHeight="190.0" prefWidth="487.0">
+         <children>
+            <ScrollPane prefHeight="190.0" prefWidth="487.0">
+               <content>
+                  <TableView fx:id="dressTable" prefHeight="190.0" prefWidth="485.0">
+                    <columns>
+                      <TableColumn fx:id="snumColumn" prefWidth="85.0" text="Serial number" />
+                      <TableColumn fx:id="size_Column" minWidth="4.0" prefWidth="38.0" text="Size" />
+                        <TableColumn fx:id="styleColumn" prefWidth="114.0" text="Style" />
+                        <TableColumn fx:id="brandColumn" prefWidth="121.0" text="Brand" />
+                        <TableColumn fx:id="colorColumn" prefWidth="114.0" text="Color" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <Label fx:id="errorClient" layoutX="28.0" layoutY="238.0" prefHeight="17.0" prefWidth="253.0" textFill="RED" />
+      <Label fx:id="errorDress" layoutX="28.0" layoutY="478.0" prefHeight="17.0" prefWidth="253.0" textFill="RED" />
+      <Label fx:id="errorOrder" layoutX="28.0" layoutY="630.0" prefHeight="17.0" prefWidth="253.0" textFill="RED" />
+      <Button fx:id="clientChoice" layoutX="515.0" layoutY="233.0" mnemonicParsing="false" onAction="#clientChoice" text="Choose a client" />
+      <Button fx:id="dressChoice" layoutX="515.0" layoutY="474.0" mnemonicParsing="false" onAction="#dressChoice" text="Choose a dress" />
+      <Button fx:id="orderChoice" layoutX="563.0" layoutY="626.0" mnemonicParsing="false" onAction="#orderChoice" text="Choose an order" />
+   </children>
+</AnchorPane>
